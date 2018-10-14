@@ -1,0 +1,14 @@
+.leaflet-container {
+    height: 100%;
+    margin-top: -45px;
+    width: 100%;
+}
+
+.leaflet-top {
+    top: 45px;
+}
+
+.MapWrapper {
+    height: 100%;
+    width: 100%;
+}
