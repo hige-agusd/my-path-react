@@ -9,6 +9,18 @@ export const setPlaces = data => {
     }
 }
 
+export const setPlace = data => {
+    return dispatch => {
+        axios.put(baseUrl + 'places/' + data.path.join('/') + '.json', data.body)
+            .then(res => {
+                dispatch(fetchPlaces());
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
+
 export const fetchPlaces = () => {
     return dispatch => {
         axios.get(baseUrl + 'places.json')
